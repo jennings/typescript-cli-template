@@ -2,7 +2,7 @@ import * as process from "process";
 import { Command } from "commander";
 import { createCommands } from "./commands";
 
-const program = new Command();
+const program = new Command().enablePositionalOptions().passThroughOptions();
 
 program.option("-n, --name <name>", "Name");
 
